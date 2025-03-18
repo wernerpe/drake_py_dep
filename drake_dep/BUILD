@@ -9,3 +9,13 @@ py_test(
         requirement("numpy"),
     ],
 )
+
+py_test(
+    name = "test_drake_imports_with_foo",
+    srcs = ["test_drake_imports_with_foo.py"],
+    deps = [
+        requirement("drake"),
+        requirement("numpy"),
+        "//drake_dep/pybind:foo_binding"
+    ],
+)

@@ -5,7 +5,10 @@
 # For more details, please check https://github.com/bazelbuild/bazel/issues/18958
 ###############################################################################
 bazel_dep(name = "rules_python", version = "0.40.0")
-#bazel_dep(name = "pybind11_bazel", version = "2.13.6")
+bazel_dep(name = "pybind11_bazel", version = "2.13.6")
+bazel_dep(name = "rules_cc", version = "0.0.17")
+bazel_dep(name = "eigen", version= "3.4.0")
+bazel_dep(name = "platforms", version = "0.0.7")
 
 python = use_extension("@rules_python//python/extensions:python.bzl", "python")
 
