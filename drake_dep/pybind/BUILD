@@ -11,3 +11,10 @@ pybind_extension(
         "//drake_dep/src:foo",
     ],
 )
+
+py_library(
+    name = "foo_binding_lib",
+    data = [":foo_binding.so"],
+    imports = ["."],
+    visibility = ["//visibility:public"],
+)

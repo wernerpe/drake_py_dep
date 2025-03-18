@@ -3,7 +3,7 @@ import numpy as np
 
 class TestBasic(unittest.TestCase):
     def test_drake_import_and_foo(self):
-        import foo_binding
+        from foo_binding import foo
         print("foo imported")
         x1 = np.ones((3,))
         x2 = -5*np.ones((3,))

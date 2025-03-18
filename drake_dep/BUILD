@@ -16,6 +16,6 @@ py_test(
     deps = [
         requirement("drake"),
         requirement("numpy"),
-        "//drake_dep/pybind:foo_binding"
+        "//drake_dep/pybind:foo_binding_lib"
     ],
 )
