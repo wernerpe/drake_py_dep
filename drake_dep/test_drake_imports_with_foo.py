@@ -7,7 +7,7 @@ class TestBasic(unittest.TestCase):
         print("foo imported")
         x1 = np.ones((3,))
         x2 = -5*np.ones((3,))
-        self.assert_(np.isclose(-4*np.ones((3,1)), foo(x1,x2)))
+        self.assert_(np.allclose(-4*np.ones((3,1)), foo(x1,x2)))
         print(f"numpy version {np.__version__}")
         from pydrake.all import (RobotDiagramBuilder,
                          LoadModelDirectives,
